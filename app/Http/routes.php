@@ -14,3 +14,25 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/features', function() {
+	return view('features');
+});
+
+Route::get('/about',function() {
+	return view('about');
+});
+
+Route::get('/customer/login', function(){
+	return view('customer.form_login');
+});
+
+Route::get('/customer/signup', function() {
+	return view('customer.form_signup');
+});
+
+Route::post('/signin/customer',[
+	'uses' => 'CustomerController@postSignIn',
+	'as' => 'customer.signin'
+]);
+	

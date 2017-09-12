@@ -39,6 +39,6 @@ class CustomerController extends Controller
 
 	public function postLogout(){
 		Auth::logout();
-		return redirect()->route('home');
+		return redirect()->route('home')->header('Clear-Site-Data','cache','storage','executionContexts');
 	}
 }

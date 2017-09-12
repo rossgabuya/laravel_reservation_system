@@ -2,8 +2,8 @@
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text 
 
-#16a085 - Green Sea
-#1abc9c - Turqoise
+#9b59b6 - Amethyst
+#8e44ad - Wisteria
 #ecf0f1 - Clouds
 
 
@@ -20,7 +20,7 @@ body {
 }
 
 a {
-  color:#1abc9c;
+  color:#9b59b6;
 }
 a:focus, a:hover{
   color:#5a5a5a;
@@ -35,7 +35,7 @@ a:focus, a:hover{
 }
 
 .alternate-color{
-  background-color: #1abc9c;
+  background-color: #9b59b6;
   color: white;
 }
 
@@ -46,15 +46,15 @@ a:focus, a:hover{
 }
 
 .btn-primary {
-  background: #1abc9c;
+  background: #9b59b6;
   color: #fff;
-  border: solid #16a085 2px;
+  border: solid #8e44ad 2px;
 }
 
-.btn-primary:hover{
+.btn-primary:hover,.btn-primary:active,.btn-primary:focus{
   background: transparent;
-  color: #5a5a5a;
-  border: solid #16a085 2px;
+  color: #9b59b6;
+  border: solid #8e44ad 2px;
 }
 
 .btn-ghost:hover {
@@ -139,6 +139,21 @@ a:focus, a:hover{
 .marketing .col-lg-4 p {
   margin-right: 10px;
   margin-left: 10px;
+}
+
+.packageBox {
+    height: 35em;
+    background-color: #282828;
+    padding-top: 2em;
+    color: white;
+    text-align: center;
+    padding-right: 1.2em;
+    padding-left: 1.2em;
+    margin: 3em .25em;
+}
+
+.packageBox:hover {
+    background-color: #111;
 }
 
 

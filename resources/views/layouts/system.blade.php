@@ -22,6 +22,13 @@
 
   <link rel="stylesheet" href="{{ url('src/css/dataTables.bootstrap.css')}}">
 
+  <script src="{{ url('src/js/jquery.js')}}"></script>
+  <script src="{{ url('src/js/bootstrap.min.js')}}"></script>
+<link rel="stylesheet" href="{{url('src/css/bootstrap-datetimepicker.min.css')}}" />
+<script type="text/javascript" src="{{url('src/js/moment.min.js')}}"></script>
+
+<script type="text/javascript" src="{{url('src/js/bootstrap-datetimepicker.min.js')}}"></script>
+
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
   <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -34,9 +41,9 @@
 @include('includes.sidebar')
 @yield('content')
 <!-- jQuery 2.2.3 -->
-<script src="{{ url('src/js/jquery.js')}}"></script>
+
 <!-- Bootstrap 3.3.6 -->
-<script src="{{ url('src/js/bootstrap.min.js')}}"></script>
+
 
 <script src="{{ url('src/js/jquery.dataTables.min.js')}}"></script>
 <script src="{{ url('src/js/dataTables.bootstrap.js')}}"></script>
@@ -47,6 +54,10 @@
 <script src="{{ url('src/js/fastclick.js')}}"></script>
 <!-- AdminLTE App -->
 <script src="{{ url('src/js/app.min.js')}}"></script>
+
+
+
+
 
 <script>
   $(function () {

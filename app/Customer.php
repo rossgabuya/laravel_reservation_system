@@ -14,4 +14,9 @@ class Customer extends Model implements AuthenticatableContract,
     use Authenticatable, CanResetPassword;
     
     protected $table = 'perma_customer_acc';
+
+    public function transaction()
+    {
+    	return $this->hasMany('App\Transaction');
+    }
 }

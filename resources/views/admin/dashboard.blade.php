@@ -23,9 +23,9 @@
           <!-- small box -->
           <div class="small-box bg-aqua">
             <div class="inner">
-              <h3>{{$data->reservations}}</h3>
+              <h3>6</h3>
 
-              <p>Reservations Made</p>
+              <p>Pending Reservations</p>
             </div>
             <div class="icon">
               <i class="fa fa-files-o"></i>
@@ -38,14 +38,14 @@
           <!-- small box -->
           <div class="small-box bg-green">
             <div class="inner">
-              <h3>{{$data->rooms}}</h3>
+              <h3>80</h3>
 
               <p>Vacant Rooms</p>
             </div>
             <div class="icon">
               <i class="glyphicon glyphicon-bed"></i>
             </div>
-            <a href="{{ url('customer/reservations')}}" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+            <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
           </div>
         </div>
         <!-- ./col -->
@@ -66,7 +66,7 @@
         <!-- ./col -->
       </div>
       <div class="row text-center" style="margin: 2em 0;">
-        <a href="{{ url('customer/reserve/new')}}" class="btn btn-lg btn-primary"> Reserve Now!</a>
+        <a href="{{ url('admin/reservations')}}" class="btn btn-lg btn-primary"> View Latest Reservations</a>
       </div>
 
       <!-- Default box -->

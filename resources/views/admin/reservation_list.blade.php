@@ -9,15 +9,8 @@
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
-    <section class="content-header row">
-      <div class="col-md-6">
-        <h3>
-          Reservations
-        </h3>
-      </div>
-      <div class="col-md-6">
-          <a href="{{ url('customer/reserve/new')}}" class="btn btn-primary pull-right"><i class="fa fa-plus"></i> New Reservation</a>
-      </div>
+    <section class="content-header">
+     <h3>Reservations</h3>
     </section>
 
     <!-- Main content -->
@@ -26,7 +19,7 @@
       <!-- Default box -->
       <div class="box">
         <div class="box-header with-border">
-          <h3 class="box-title">List of Reservations</h3>
+          <h3 class="box-title">List of Pending Reservations</h3>
 
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip" title="Collapse">
@@ -42,10 +35,11 @@
                   <th>Particulars</th>
                   <th>Quantity</th>
                   <th>Total Amount</th>
-                  <th>Status</th>
+                  <th>Action</th>
                 </tr>
                 </thead>
                 <tbody>
+                @if(count($transactions) > 0)
                 @foreach($transactions as $transaction)
                  <tr>
                   <td>{{ $transaction->transaction_ref }}</td>
@@ -54,15 +48,17 @@
                   </td>
                   <td>{{ $transaction->days}} days</td>
                   <td>P {{ $transaction->paid_amount}}</td>
-                  @if($transaction->status == 1)
-                  <td> <span class="label label-success"> paid </span></td>
-                  @elseif($transaction->status == 2)
-                  <td> <span class="label label-warning"> pending </span></td>
-                  @else
-                  <td> <span class="label label-danger"> void </span></td>
+                  @if($transaction->status == 2)
+                  <td> <a href="{{ url('admin/reserve/confirm/'.$transaction->id.'/'.$transaction->transaction_ref) }}" class="btn btn-info confirm"> <span class="fa fa-check"></span> </a><a href="{{ url('admin/reserve/void/'.$transaction->id.'/'.$transaction->transaction_ref) }}" class="btn btn-danger void"><span class="fa fa-close"></span></a></td>
                   @endif
                 </tr>
                 @endforeach
+                @else
+
+                <tr>
+                  <td colspan="6"> <h4> No pending reservations </h4></td>
+                </tr>
+                @endif
                
                 </tbody>
                 <tfoot>
@@ -72,7 +68,7 @@
                   <th>Particulars</th>
                   <th>Quantity</th>
                   <th>Total Amount</th>
-                  <th>Status</th>
+                  <th>Action</th>
                 </tr>
                 </tfoot>
               </table>

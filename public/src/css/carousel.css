@@ -15,6 +15,16 @@ body {
   background-color: #ecf0f1;
 }
 
+.well {
+  color: #5a5a5a;
+  border-radius: 0px;
+}
+
+#arrival_details label {
+  font-size: .75em;
+  font-weight: 200;
+}
+
 .form-control{
   border-radius: 0px;
 }
@@ -56,6 +66,25 @@ a:focus, a:hover{
   color: #9b59b6;
   border: solid #8e44ad 2px;
 }
+
+.btn > input[type=radio] {
+  display: none;
+  position:absolute;
+}
+
+.btn span.glyphicon {
+  opacity: 0;
+}
+.btn.active span.glyphicon {
+  opacity: 1;
+}
+
+.btn-primary.active,.btn-primary.active:hover,.btn-primary.active:focus {
+  background: transparent;
+  color: #9b59b6;
+  border: solid #8e44ad 2px;
+}
+
 
 .btn-ghost:hover {
   background: #fff;
@@ -142,7 +171,7 @@ a:focus, a:hover{
 }
 
 .packageBox {
-    height: 35em;
+    height: 30em;
     background-color: #282828;
     padding-top: 2em;
     color: white;
@@ -154,6 +183,29 @@ a:focus, a:hover{
 
 .packageBox:hover {
     background-color: #111;
+}
+
+.reserveBox{
+    height: 17em;
+    background-color: #282828;
+    padding-top: 2em;
+    color: white;
+    text-align: left;
+    padding-right: 1.2em;
+    padding-left: 1.2em;
+    margin: 3em .25em;
+    overflow-y: scroll;
+}
+
+.reserveBoxDetails{
+    background-color: #282828;
+    padding-top: 2em;
+    color: white;
+    text-align: left;
+    padding-right: 1.2em;
+    padding-left: 1.2em;
+    margin: 3em .25em;
+    font-size: 1.5em;
 }
 
 

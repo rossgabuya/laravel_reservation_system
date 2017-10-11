@@ -21,6 +21,14 @@
   <link rel="stylesheet" href="{{ url('src/css/carousel.css')}}">
 
   <link rel="stylesheet" href="{{ url('src/css/dataTables.bootstrap.css')}}">
+  <link rel="stylesheet" href="{{url('src/css/bootstrap-datetimepicker.min.css')}}" />
+
+<script src="{{ url('src/js/jquery.js')}}"></script>
+<script type="text/javascript" src="{{url('src/js/moment.min.js')}}"></script>
+
+<script type="text/javascript" src="{{url('src/js/bootstrap-datetimepicker.min.js')}}"></script>
+
+<script src="{{ url('src/js/bootstrap.min.js')}}"></script>
 
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -34,9 +42,8 @@
 
 @yield('content')
 <!-- jQuery 2.2.3 -->
-<script src="{{ url('src/js/jquery.js')}}"></script>
+
 <!-- Bootstrap 3.3.6 -->
-<script src="{{ url('src/js/bootstrap.min.js')}}"></script>
 
 <script src="{{ url('src/js/jquery.dataTables.min.js')}}"></script>
 <script src="{{ url('src/js/dataTables.bootstrap.js')}}"></script>
